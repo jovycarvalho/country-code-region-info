@@ -1,0 +1,49 @@
+==========================================================================================
+Logging initialized. Output will be written to: /home/jovy/Documents/Cursos/DevOps/exercices/country-code-region-info/src/../logs/get_country_code_info_20250427105456.log
+==========================================================================================
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] INITIALIZING CSV PROCESSOR SCRIPT
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Parsing arguments
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Arguments parsed successfully
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Preparing directories and files
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Directory ../data/source does not exits. Creating it.
+20250427105456 [[INFO]] Creating directory: ../data/source
+20250427105456 [[INFO]] Directory ../data/bacuckup does not exits. Creating it.
+20250427105456 [[INFO]] Creating directory: ../data/bacuckup
+20250427105456 [[INFO]] Creating new data file: '../data/source/source.csv'
+20250427105456 [[INFO]] File created: ../data/source/source.csv
+20250427105456 [[INFO]] Directories prepared successfully
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Starting download from: 'https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv'
+20250427105456 [[INFO]] ======================================================================
+Downloading CSV from URL: https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv
+Output path: ../data/source/source.csv
+20250427105456 [[INFO]] Downloading CSV from 'https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv' to '../data/source/source.csv'
+20250427105456 [[INFO]] CSV downloaded successfully to '../data/source/source.csv'
+20250427105456 [[INFO]] Download completed successfully
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Serching for 'Brazil' in CSV: '../data/source/source.csv'
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Searching for 'Brazil' in CSV: '../data/source/source.csv'
+20250427105456 [[INFO]] Directory ../data/precessed does not exits. Creating it.
+20250427105456 [[INFO]] Creating directory: ../data/precessed
+20250427105456 [[INFO]] File ../data/precessed/results_Brazil_20250427105456.csv does not exist. Creating it.
+20250427105456 [[INFO]] File created: ../data/precessed/results_Brazil_20250427105456.csv
+20250427105456 [[WARN]] ripgrep (rg) not found. Falling back to awk search (may be slower).
+20250427105456 [[INFO]] Search completed. Results saved to '../data/precessed/results_Brazil_20250427105456.csv'
+20250427105456 [[INFO]] Search completed successfully
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] Printing search result in table fomat
+20250427105456 [[INFO]] ======================================================================
+NAME     ALPHA-2   ALPHA-3   COUNTRY-CODE   ISO_3166-2      REGION     SUB-REGION                        INTERMEDIATE-REGION   REGION-CODE   SUB-REGION-CODE   INTERMEDIATE-REGION-CODE   
+-------- --------- --------- -------------- --------------- ---------- --------------------------------- --------------------- ------------- ----------------- -------------------------- 
+Brazil   BR        BRA       076            ISO 3166-2:BR   Americas   Latin America and the Caribbean   South America         019           419               005                        
+20250427105456 [[INFO]] Search results printed successfully
+20250427105456 [[INFO]] Processing completed successfully
+20250427105456 [[INFO]] ======================================================================
+20250427105456 [[INFO]] CSV PROCESSOR SCRIPT FINISHED!
+20250427105456 [[INFO]] ======================================================================

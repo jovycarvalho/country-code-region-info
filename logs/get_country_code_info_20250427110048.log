@@ -1,0 +1,51 @@
+==========================================================================================
+Logging initialized. Output will be written to: /home/jovy/Documents/Cursos/DevOps/exercices/country-code-region-info/src/../logs/get_country_code_info_20250427110048.log
+==========================================================================================
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] INITIALIZING CSV PROCESSOR SCRIPT
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Parsing arguments
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Arguments parsed successfully
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Preparing directories and files
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Directory ../data/source exists. No action needed.
+20250427110048 [[INFO]] Directory ../data/bacuckup exists. No action needed.
+20250427110048 [[INFO]] Cleaning up temporary directory: '../data/source'
+20250427110048 [[INFO]] Directory ../data/bacuckup/202504271100 does not exits. Creating it.
+20250427110048 [[INFO]] Creating directory: ../data/bacuckup/202504271100
+20250427110048 [[INFO]] Backup completed successefully . Files and directories moved to: ../data/bacuckup/202504271100
+20250427110048 [[INFO]] ../data/source backed up to: '../data/bacuckup'
+20250427110048 [[INFO]] Creating new data file: '../data/source/source.csv'
+20250427110048 [[INFO]] File created: ../data/source/source.csv
+20250427110048 [[INFO]] Directories prepared successfully
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Starting download from: 'https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv'
+20250427110048 [[INFO]] ======================================================================
+Downloading CSV from URL: https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv
+Output path: ../data/source/source.csv
+20250427110048 [[INFO]] Downloading CSV from 'https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv' to '../data/source/source.csv'
+20250427110048 [[INFO]] CSV downloaded successfully to '../data/source/source.csv'
+20250427110048 [[INFO]] Download completed successfully
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Serching for 'Angola' in CSV: '../data/source/source.csv'
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Searching for 'Angola' in CSV: '../data/source/source.csv'
+20250427110048 [[INFO]] Directory ../data/precessed exists. No action needed.
+20250427110048 [[INFO]] File ../data/precessed/results_Angola_20250427110048.csv does not exist. Creating it.
+20250427110048 [[INFO]] File created: ../data/precessed/results_Angola_20250427110048.csv
+20250427110048 [[WARN]] ripgrep (rg) not found. Falling back to awk search (may be slower).
+20250427110048 [[INFO]] Search completed. Results saved to '../data/precessed/results_Angola_20250427110048.csv'
+20250427110048 [[INFO]] Search completed successfully
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] Printing search result in table fomat
+20250427110048 [[INFO]] ======================================================================
+NAME     ALPHA-2   ALPHA-3   COUNTRY-CODE   ISO_3166-2      REGION   SUB-REGION           INTERMEDIATE-REGION   REGION-CODE   SUB-REGION-CODE   INTERMEDIATE-REGION-CODE   
+-------- --------- --------- -------------- --------------- -------- -------------------- --------------------- ------------- ----------------- -------------------------- 
+Angola   AO        AGO       024            ISO 3166-2:AO   Africa   Sub-Saharan Africa   Middle Africa         002           202               017                        
+20250427110048 [[INFO]] Search results printed successfully
+20250427110048 [[INFO]] Processing completed successfully
+20250427110048 [[INFO]] ======================================================================
+20250427110048 [[INFO]] CSV PROCESSOR SCRIPT FINISHED!
+20250427110048 [[INFO]] ======================================================================
