@@ -1,6 +1,9 @@
 # 📚 Country Code Region Info
 > **A Practical Shell Script Project to Master Bash Scripting: From Basics to Advanced Techniques**
 
+This project aims to be a comprehensive and practical educational resource for individuals who wish to master the development of applications and tools using shell script. The central objective is to provide a progressive learning guide, from the most elementary concepts to the most advanced techniques. Based on the development of a concrete tool, as proposed in this project (information about country and region codes), it offers a rich and motivating context for acquiring shell script skills. This method of learning through practice facilitates a deeper and more lasting understanding of the concepts, while simultaneously promoting the adoption of good practices from the outset.
+
+
 ---
 
 ## 📌 Table of Contents
