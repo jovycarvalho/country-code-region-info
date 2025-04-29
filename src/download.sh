@@ -28,8 +28,8 @@ source "$SCRIPT_DIR/utils.sh"
 # ================================================================================
 
 download() {
-    local url="${1}"
-    local output_path="${2}"
+    local url="$1"
+    local output_path="$2"
 
     echo "Downloading CSV from URL: ${url}"
     echo "Output path: ${output_path}"
