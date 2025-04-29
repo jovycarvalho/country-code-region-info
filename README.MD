@@ -132,6 +132,29 @@ Cabo Verde   CV        CPV       132            ISO 3166-2:CV   Africa   Sub-Sah
 ```
 ---
 
+## 📚 Important Files Overview
+
+### ✨ `src/utils.sh`: The Core Utility Library
+
+🔵 Purpose:
+- **General-purpose helper functions**.
+- Not executable — only **sourced** by scripts.
+
+🔵 Key Characteristics:
+- No hardcoded variables or paths.
+- Functions are **idempotent** (safe to call multiple times).
+- Clear and strict input validation.
+
+🔵 Highlighted Functions:
+| Function | Purpose | File Link + Line |
+| :--- | :--- | :--- |
+| `path_exists()` | Check if a given path exists | [lib/utils.sh#L10](src/utils.sh#L10) |
+| `is_file()` | Check if a path is a regular file | [src/utils.sh#L18](src/utils.sh#L18) |
+| `is_empty_file()` | Check if file is empty | [src/utils.sh#L26](src/utils.sh#L26) |
+| `dir_create_if_not_exist()` | Create directory if it doesn't exist | [src/utils.sh#L34](src/utils.sh#L34) |
+| `file_create_if_not_exist()` | Create an empty file if missing | [src/utils.sh#L42](src/utils.sh#L42) |
+| `log_info()`, `log_warning()`, `log_error()` | Centralized logging functions | [src/utils.sh#L50-L78](src/utils.sh#L50) |
+
 ## 🧐 Core Concepts
 
 ### 📄 Scripts vs Libraries
@@ -191,7 +214,8 @@ download() {
 
 > 📍 **File**: [`search.sh`](search.sh) — Lines 2-4 — **inside `search_in_csv()`**
 
-### Variables User
+### How to use Variables
+
 - Always Quote Variables
 - Validate Inputs Clearly and Early
 - Use readonly for Constants (when applicable)
@@ -305,7 +329,7 @@ file_create_if_not_exist() {
 
 ```
 
-**Importing Libraries:**
+## **Importing Libraries:**
 ```bash
 # At the top of your script
 # Load configuration and functions
@@ -316,29 +340,6 @@ source "${SCRIPT_DIR}/../src/search.sh"
 source "${SCRIPT_DIR}/../src/print_csv_files.sh"
 ```
 ---
-
-## 📚 Important Files Overview
-
-### ✨ `src/utils.sh`: The Core Utility Library
-
-🔵 Purpose:
-- **General-purpose helper functions**.
-- Not executable — only **sourced** by scripts.
-
-🔵 Key Characteristics:
-- No hardcoded variables or paths.
-- Functions are **idempotent** (safe to call multiple times).
-- Clear and strict input validation.
-
-🔵 Highlighted Functions:
-| Function | Purpose | File Link + Line |
-| :--- | :--- | :--- |
-| `path_exists()` | Check if a given path exists | [lib/utils.sh#L10](src/utils.sh#L10) |
-| `is_file()` | Check if a path is a regular file | [src/utils.sh#L18](src/utils.sh#L18) |
-| `is_empty_file()` | Check if file is empty | [src/utils.sh#L26](src/utils.sh#L26) |
-| `dir_create_if_not_exist()` | Create directory if it doesn't exist | [src/utils.sh#L34](src/utils.sh#L34) |
-| `file_create_if_not_exist()` | Create an empty file if missing | [src/utils.sh#L42](src/utils.sh#L42) |
-| `log_info()`, `log_warning()`, `log_error()` | Centralized logging functions | [src/utils.sh#L50-L78](src/utils.sh#L50) |
 
 Example: **Create a Directory If Missing**
 ```bash
