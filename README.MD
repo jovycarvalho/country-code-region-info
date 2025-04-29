@@ -77,7 +77,6 @@ chmod +x search.sh
 
 Example:
     ./get_country_code_info.sh https://cdn.wsform.com/wp-content/uploads/2018/09/country_full.csv "Cabo Verde" csv
-
 ```
 # Output
 
@@ -148,8 +147,25 @@ cd ../src/
 # Make sure your scripts are executable
 chmod +x search.sh
 # Run the search
-./search.sh -i data/source/source.csv -s "Cabo Verde" -o output.csv
+./search.sh -i ../data/source/source.csv -s "Cabo Verde" -o output.csv
 ```
+
+# Output
+
+```bash
+./search.sh -i ../data/source/source.csv -s "Cabo Verde" -o output.csv
+
+20250429185333 [[INFO]] ======================================================================
+20250429185333 [[INFO]] Parsing arguments
+20250429185333 [[INFO]] ======================================================================
+20250429185333 [[INFO]] Searching for 'Cabo Verde' in CSV: '../data/source/source.csv'
+20250429185333 [[INFO]] Directory . exists. No action needed.
+20250429185333 [[INFO]] File output.csv_cabo_verde.csv does not exist. Creating it.
+20250429185333 [[INFO]] File created: output.csv_cabo_verde.csv
+20250429185333 [[WARN]] ripgrep (rg) not found. Falling back to awk search (may be slower).
+20250429185333 [[INFO]] Search completed. Results saved to 'output.csv_cabo_verde.csv'
+```
+
 ---
 
 ### 🛠️ Variable Declaration and uses: Best Practices
