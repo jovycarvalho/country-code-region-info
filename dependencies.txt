@@ -1,0 +1,7 @@
+
+# For download
+curl
+wget
+
+# For testing (https://bats-core.readthedocs.io/en/stable/installation.html#linux-distribution-package-manager)
+bats

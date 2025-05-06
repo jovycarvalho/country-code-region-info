@@ -37,7 +37,7 @@ download() {
     # Validate inputs
     if ! validate_input "${url}" || ! validate_input "${output_path}"; then
         log_error "Usage: download_csv <url> <output_path>"
-        return 0
+        return 1
     fi
 
     if [[ ! "${url}" =~ ^https?:// ]]; then
@@ -99,7 +99,7 @@ download() {
 
 main() {
     setup_logging "."
-    download "$1" "$2"
+    download "$@"
 
     if [[ $? -ne 0 ]]; then
         log_error "Failed to download CSV file"
