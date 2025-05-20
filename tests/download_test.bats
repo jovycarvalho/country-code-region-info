@@ -58,7 +58,7 @@ EOF
   chmod +x "$BATS_TMPDIR/fakebin/curl"
 
   run bash "${SCRIPT_DIR}/download.sh" "https://example.com/test.txt" "$BATS_TMPDIR/output/test.txt"
-  [[ "$output" =~ "Downloaded file does not have a .csv extension" ]]
+  [[ "$output" =~ 'Downloaded file does not have a .csv extension' ]]
 }
 
 @test "warns if file is empty" {
@@ -74,9 +74,13 @@ EOF
 }
 
 @test "fails if neither curl nor wget is available" {
-  run bash "${SCRIPT_DIR}/download.sh" "https://example.com/file.csv" "$BATS_TMPDIR/output/test.csv"
-  [[ "$output" =~ '[ERROR] Neither curl nor wget is installed' ]]
+       # Ensure curl and wget aren't in PATH
+       rm -f "$BATS_TMPDIR/fakebin/curl" "$BATS_TMPDIR/fakebin/wget"
+
+       run bash "${SCRIPT_DIR}/download.sh" "https://example.com/file.csv" "$BATS_TMPDIR/output/test.csv"
+       [[ "$output" =~ '[ERROR] Neither curl nor wget is installed' ]]
 }
+
 
 @test "fails if curl fails" {
   mkdir -p "$BATS_TMPDIR/output"

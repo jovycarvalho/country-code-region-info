@@ -69,7 +69,7 @@ download() {
             return 1
         fi
     else
-        log_error "Neither curl nor wget is installed"
+        log_error " [ERROR] Neither curl nor wget is installed"
         return 1
     fi
 
